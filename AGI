@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'cli/ui'
+CLI::UI::Prompt.ask('==> AGI:  Select an option:') do |handler|
+  handler.option('xfce')  { |selection| selection; system("apk update && setup-xorg-base xfce4 xfce4-terminal lightdm-gtk-greeter xfce4-screensaver faenza-icon-theme dbus-x11 sudo polkit consolekit2 gvfs-fuse gvfs-smb fuse-openrc thunar-volman udisks2 && rc-update add dbus && rc-update add lightdm && rc-update add fuse && echo rebooting. && echo rebooting.. && echo rebooting... && echo rebooting. && echo rebooting.. && reboot  ") }
+  handler.option('exit')     { |selection| selection; exit }
+end

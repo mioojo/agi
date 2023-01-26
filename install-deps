@@ -1,0 +1,2 @@
+#!/usr/bin/env ash
+apk add ruby && gem install cli-ui && echo "Dependencies installed"
